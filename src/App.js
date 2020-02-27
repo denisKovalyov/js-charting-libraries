@@ -3,21 +3,7 @@ import { ChartingProvider } from '@chart-parts/react'
 import { Renderer } from '@chart-parts/react-svg-renderer'
 
 import './App.css';
-import BarChart from './components/chart-parts-microsoft/BarChart';
 import LineChart from './components/chart-parts-microsoft/LineChart';
-
-const dataset = {
-  data: [
-    { category: 'A', amount: 28 },
-    { category: 'B', amount: 55 },
-    { category: 'C', amount: 43 },
-    { category: 'D', amount: 91 },
-    { category: 'E', amount: 81 },
-    { category: 'F', amount: 53 },
-    { category: 'G', amount: 19 },
-    { category: 'H', amount: 87 },
-  ],
-};
 
 const renderer = new Renderer();
 
@@ -28,11 +14,24 @@ function App() {
         <section>
           <h2>chart-parts (microsoft)</h2>
           <LineChart />
-          <br/>
-          <br/>
-          <BarChart data={dataset} width={400} height={200} />
         </section>
-
+        <div className="desc">
+          <h3>Pros:</h3>
+          <ul>
+            <li>Neat and clear data structure for rendering multiple charts</li>
+            <li>Easy to set required labels</li>
+            <li>Provide low level API for building graphs</li>
+          </ul>
+          <h3>Cons:</h3>
+          <ul>
+            <li>It is not responsive by default, chart have fixed dimensions</li>
+            <li>There are no many info regarding lib applying and live examples in the Inet</li>
+          </ul>
+          <h3>Notes:</h3>
+          <ul>
+            <li>A lot of things (like Tooltips and animation on rerender) are not available with lib API and could be implemented by custom code</li>
+          </ul>
+        </div>
       </div>
     </ChartingProvider>
   );
