@@ -5,6 +5,7 @@ import { Renderer } from '@chart-parts/react-svg-renderer'
 import './App.css';
 import LineChart from './components/chart-parts-microsoft/LineChart';
 import LineChartReactVis from './components/react-vis/LineChart';
+import LineChartCanvasJS from './components/canvas-js/LineChart';
 
 const renderer = new Renderer();
 
@@ -49,8 +50,29 @@ function App() {
             </ul>
             <h3>Cons:</h3>
             <ul>
-              <li>Not very easy to set particular tick labels (but anyway it's better than we have in "chart.js" now)</li>
+              <li>Not easy to set particular tick labels (but anyway it's better than we have in "chart.js" now)</li>
               <li>Quite huge size - 1.81 Mb ("chart-parts" size is 619 Kb; atm we use combination of "react-chartjs-2" - 502 Kb and "chart.js" - 1.41 Mb, which is even larger than "react-vis")</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>canvas-js</h2>
+          <LineChartCanvasJS />
+          <div className="desc">
+            <h3>Pros:</h3>
+            <ul>
+              <li>Clear and useful documentation</li>
+              <li>Responsive and scalable charts</li>
+              <li>Smoothly animated by default</li>
+              <li>Has in-build feature for exporting charts as images and printing</li>
+              <li>Easy to set tooltip content</li>
+            </ul>
+            <h3>Cons:</h3>
+            <ul>
+              <li>There is no in-build functionality to render custom tooltip on label text hovering</li>
+              <li>Not easy to set particular tick labels (but anyway it's better than we have in "chart.js" now)</li>
+              <li>Requires purchase of commercial licence</li>
             </ul>
           </div>
         </section>
