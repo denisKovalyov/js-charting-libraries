@@ -1,5 +1,5 @@
 # js-charting-libraries
-Investigation of JavaScript Charting Libraries
+Research of JavaScript Charting Libraries
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
